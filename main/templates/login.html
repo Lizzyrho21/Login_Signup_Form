@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{%block content %}
+<div class="container-two">
+    <h1>Login</h1>
+
+    <form method=POST>
+        {%csrf_token%}
+        {{login_form.as_p}}
+        <button type="submit">Login</button>
+    </form>
+    <p class="text-center">If you don't have an account, <a href="/login/register">Register</a> instead.</p>
+</div>
+
+{%endblock content %}
